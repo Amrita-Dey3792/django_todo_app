@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from .forms import CategoryForm
 
 # Create your views here.
 
@@ -66,3 +67,7 @@ def user_logout(request):
     messages.success(request, 'Logged out successfully.')
     return redirect('user_login')
 
+
+def add_category(request):
+    form = CategoryForm()
+    return render(request, 'todoapp/category_form.html', {'form': form})
