@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html data-theme="autumn" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% comment %} Include Roboto font for typography {% endcomment %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    {% comment %} Include font awesome CSS for icon {% endcomment %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    {% comment %} Include DaisyUI CSS for styling {% endcomment %}
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    
+    {% comment %} Include Toastify CSS for styling {% endcomment %}
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    
+    <title>{% block title %}{% endblock %}</title>
+
+    <style>
+        body {
+            font-family: "Roboto", serif;
+        }
+    </style>
+</head>
+<body>
+    {% block body %}
+    <div class="drawer lg:drawer-open">
+        <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content">
+          <header data-theme="light">
+            {% include "components/topnav.html" %}
+          </header>
+          <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">
+            Open drawer
+          </label>
+        </div>
+    {% include "components/sidebar.html" %}
+    {% endblock %}
+    
+    {% comment %} Include Tailwind CSS via CDN {% endcomment %}
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    {% comment %} Include Toastify JS {% endcomment %}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    
+    {% comment %} Include custom JavaScript for the theme switcher and toast messages {% endcomment %}
+    {% if messages %}
+      {% for message in messages %}
+        <script>
+          Toastify({
+            text: "{{ message }}",
+            duration: 5000,
+            position: "right",
+            className: "info",
+            close: true,
+            style: {
+              background: "{% if message.tags == "success" %} linear-gradient(to right, #00b09b, #96c93d) {% else %} #F90369{% endif %}",
+            }
+          }).showToast();
+        </script>
+      {% endfor %}
+    {% endif %}
+</body>
+</html>
