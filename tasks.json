@@ -1,0 +1,185 @@
+[
+    {
+        "model": "todoapp.category",
+        "pk": 1,
+        "fields": {
+            "name": "Work",
+            "description": "Work related tasks",
+            "user": 9,
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "todoapp.category",
+        "pk": 2,
+        "fields": {
+            "name": "Personal",
+            "description": "Personal tasks and errands",
+            "user": 9,
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "todoapp.category",
+        "pk": 3,
+        "fields": {
+            "name": "Study",
+            "description": "Learning and educational tasks",
+            "user": 9,
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "todoapp.task",
+        "pk": 1,
+        "fields": {
+            "title": "Complete Project Proposal",
+            "description": "Write and submit the Q1 project proposal",
+            "category": 1,
+            "priority": "high",
+            "status": "pending",
+            "due_date": "2024-01-15",
+            "user": 1,
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "todoapp.task",
+        "pk": 2,
+        "fields": {
+            "title": "Gym Session",
+            "description": "1 hour workout at the gym",
+            "category": 2,
+            "priority": "medium",
+            "status": "in_progress",
+            "due_date": "2024-01-10",
+            "user": 9,
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "todoapp.task",
+        "pk": 3,
+        "fields": {
+            "title": "Learn Django REST Framework",
+            "description": "Complete the DRF tutorial",
+            "category": 3,
+            "priority": "high",
+            "status": "pending",
+            "due_date": "2024-01-20",
+            "user": 9,
+            "created_at": "2024-01-01T00:00:00Z",
+            "updated_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "todoapp.task",
+        "pk": 4,
+        "fields": {
+            "title": "Prepare Presentation Slides",
+            "description": "Create slides for the upcoming team meeting",
+            "category": 1,
+            "priority": "high",
+            "status": "pending",
+            "due_date": "2024-01-18",
+            "user": 1,
+            "created_at": "2024-01-02T00:00:00Z",
+            "updated_at": "2024-01-02T00:00:00Z"
+        }
+    },
+    {
+        "model": "todoapp.task",
+        "pk": 5,
+        "fields": {
+            "title": "Buy Groceries",
+            "description": "Milk, eggs, vegetables, and fruits",
+            "category": 2,
+            "priority": "medium",
+            "status": "pending",
+            "due_date": "2024-01-12",
+            "user": 9,
+            "created_at": "2024-01-02T00:00:00Z",
+            "updated_at": "2024-01-02T00:00:00Z"
+        }
+    },
+    {
+        "model": "todoapp.task",
+        "pk": 6,
+        "fields": {
+            "title": "Read Python Book",
+            "description": "Complete chapter 5 of Python Crash Course",
+            "category": 3,
+            "priority": "low",
+            "status": "in_progress",
+            "due_date": "2024-01-22",
+            "user": 9,
+            "created_at": "2024-01-02T00:00:00Z",
+            "updated_at": "2024-01-02T00:00:00Z"
+        }
+    },
+    {
+        "model": "todoapp.task",
+        "pk": 7,
+        "fields": {
+            "title": "Team Meeting",
+            "description": "Discuss project milestones with the team",
+            "category": 1,
+            "priority": "high",
+            "status": "completed",
+            "due_date": "2024-01-10",
+            "user": 1,
+            "created_at": "2024-01-02T00:00:00Z",
+            "updated_at": "2024-01-02T00:00:00Z"
+        }
+    },
+    {
+        "model": "todoapp.task",
+        "pk": 8,
+        "fields": {
+            "title": "Yoga Session",
+            "description": "Join online yoga class",
+            "category": 2,
+            "priority": "low",
+            "status": "pending",
+            "due_date": "2024-01-14",
+            "user": 9,
+            "created_at": "2024-01-02T00:00:00Z",
+            "updated_at": "2024-01-02T00:00:00Z"
+        }
+    },
+    {
+        "model": "todoapp.task",
+        "pk": 9,
+        "fields": {
+            "title": "Complete JavaScript Tutorial",
+            "description": "Finish the ES6 module on MDN",
+            "category": 3,
+            "priority": "medium",
+            "status": "pending",
+            "due_date": "2024-01-25",
+            "user": 9,
+            "created_at": "2024-01-02T00:00:00Z",
+            "updated_at": "2024-01-02T00:00:00Z"
+        }
+    },
+    {
+        "model": "todoapp.task",
+        "pk": 10,
+        "fields": {
+            "title": "Client Call",
+            "description": "Discuss project requirements with the client",
+            "category": 1,
+            "priority": "high",
+            "status": "pending",
+            "due_date": "2024-01-11",
+            "user": 1,
+            "created_at": "2024-01-02T00:00:00Z",
+            "updated_at": "2024-01-02T00:00:00Z"
+        }
+    }
+]

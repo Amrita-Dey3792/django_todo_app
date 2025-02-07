@@ -1,20 +1,32 @@
 {% extends "todoapp/layout.html" %}
 
 {% block content %}
-<section class="p-10">
-    <form class="flex flex-col items-start gap-4 max-w-screen-md mx-auto p-8 shadow-md rounded-xl" action="" data-theme="light">
-        <h1 class="text-2xl font-medium">Add New Category</h1>
-        {% for field in form %}
-        <label class="form-control w-full font-medium">
-            <div class="label">
-              <span class="label-text">{{ field.label }}</span>
+<section class="p-10 shadow-md rounded-xl" data-theme="light">
+    <h1 class="text-2xl font-medium mb-5">
+      {% if form.instance.pk %}
+        Update Category
+        {% else %}
+        Add New Category
+      {% endif %}
+    </h1>
+    <form class="flex flex-col gap-3 items-start" method="POST">
+      {% csrf_token %}
+      {% for field in form %}
+      <label class="form-control w-full font-medium">
+          <div class="label">
+            <span class="label-text">{{ field.label }}</span>
               
-            </div>
-            {{ field }}
-           
-          </label>
+          </div>
+          {{ field }}
+      </label>
         {% endfor %}
-        <button class="btn btn-neutral text-white" data-theme="aqua">Add</button>
+      <button class="btn btn-neutral text-white" data-theme="aqua">
+        {% if form.instance.pk %}
+          Update
+        {% else %}
+          Create
+        {% endif %}
+      </button>
     </form>
 </section>
 {% endblock %}

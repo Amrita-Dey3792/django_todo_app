@@ -5,9 +5,9 @@
 {% block body %}
 <section class="mx-auto flex flex-col lg:flex-row items-center xl:max-w-screen-xl my-[20px] md:my-[160px] gap-8 px-3 md:px-12">
     <div class="basis-full lg:basis-[50%]">
-      <img class="w-full" src="{% static "images/concept-of-to-do-list.png" %}" alt="">
+      <img class="w-full" src="{% static "todoapp/images/concept-of-to-do-list.png" %}" alt="">
     </div>
-    <section class="max-w-screen-sm mx-auto shadow-xl px-4 py-8 md:p-16 bg-white basis-full lg:basis-[50%]">
+    <section class="max-w-screen-sm mx-auto shadow-xl px-4 py-8 md:p-16 bg-white basis-full lg:basis-[50%] rounded-xl">
       <h2 class="text-3xl font-semibold text-center">Login</h2>
       <p class="text-center mt-3 mb-7">
         Enter your credentials to access your account.
@@ -42,7 +42,7 @@
           </svg>
           <input type="password" class="grow font-medium" placeholder="password" name="password" required />
         </label>
-        <p class="flex items-center justify-end"><label class="flex items-center gap-2" for=""><a class="text-blue-600 font-medium hover:underline" href="#">Forgot Password?</a></p>
+        <p class="flex items-center justify-end"><label class="flex items-center gap-2" for=""><a class="text-blue-600 font-medium hover:underline" href="{% url "forgot_password" %}">Forgot Password?</a></p>
         <button class="btn w-full text-white text-lg" data-theme="aqua">
           Login
         </button>

@@ -34,7 +34,7 @@
           <header data-theme="light">
             {% include "components/topnav.html" %}
           </header>
-          <main class="p-10">
+          <main class="px-3 py-8 md:p-10">
             {% block content %}
             {% endblock %}
           </main>
@@ -54,8 +54,8 @@
         <script>
           Toastify({
             text: "{{ message }}",
-            duration: 5000,
-            position: "right",
+            duration: 10000,
+            position: "center",
             className: "info",
             close: true,
             style: {
